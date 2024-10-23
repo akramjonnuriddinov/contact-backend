@@ -18,7 +18,7 @@ func main() {
 
 	// Set up CORS middleware to allow requests from your Vue frontend (localhost:5173)
 	corsHandler := handlers.CORS(
-		handlers.AllowedOrigins([]string{"http://localhost:5173"}), // Replace with your frontend origin
+		handlers.AllowedOrigins([]string{"*"}), // Replace with your frontend origin
 		handlers.AllowedMethods([]string{"GET", "POST", "PUT", "DELETE"}),
 		handlers.AllowedHeaders([]string{"Content-Type", "Authorization"}),
 	)
